@@ -1,0 +1,103 @@
+/* Grid container for the cards */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px;
+  justify-content: center;
+  align-items: stretch;
+  background: #f4f4f4;
+}
+
+/* Basic card styling */
+.user-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background: #f8f9fa;
+  width: calc(100% - 40px);
+  max-width: 350px;
+  cursor: pointer;
+  border: 2px solid #ddd;
+}
+
+/* Hover effect for cards */
+.user-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Styling the image */
+.profile-pic {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: none;
+  transition: transform 0.4s ease;
+}
+
+/* Hover effect for images */
+.user-card:hover .profile-pic {
+  transform: scale(1.1);
+}
+
+/* Card content styling */
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Verification icon styling */
+.verification-icon {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 20px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  border: 2px solid #ddd;
+}
+
+.verified {
+  color: #28a745;
+}
+
+.not-verified {
+  color: #dc3545;
+}
+
+/* Card content text styling */
+.card-content h2 {
+  margin: 10px 0;
+  font-size: 1.8em;
+  color: #2c3e50;
+  transition: color 0.4s ease;
+}
+
+.user-card:hover .card-content h2 {
+  color: #e67e22;
+}
+
+.card-content p {
+  margin: 10px 0;
+  color: #7f8c8d;
+}
+
+/* Adding animations */
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.user-card {
+  animation: popIn 0.6s ease-out;
+}

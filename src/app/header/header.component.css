@@ -1,0 +1,56 @@
+/* Header Styles */
+.header {
+  background: #1a1a1a;
+  color: #f1c40f;
+  text-align: left;
+  padding: 30px 10%;
+  border-bottom: 5px solid #e74c3c;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.header p {
+  font-size: 1.1rem;
+  margin: 15px 0 0;
+  color: #ecf0f1;
+  font-style: italic;
+}
+
+/* Adding a Decorative Element */
+.header::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #e74c3c;
+  top: -50px;
+  right: -50px;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: #f39c12;
+  bottom: -100px;
+  left: -100px;
+  border-radius: 50%;
+  z-index: 0;
+}
